@@ -54,7 +54,7 @@ def main():
     c_A, nodes_A = read_cover(argv[1])
     c_B, nodes_B = read_cover(argv[2])
     
-    if len(nodes_A & nodes_B) != len(nodes_A | nodes_B):
+    if nodes_A == nodes_B:
         print('Improper covers! Please check the inputs.')
         return
     I = mutual_info(c_A, c_B)
